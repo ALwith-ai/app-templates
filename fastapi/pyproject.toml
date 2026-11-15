@@ -1,0 +1,19 @@
+[project]
+name = "service"
+version = "0.1.0"
+requires-python = ">=3.15"
+dependencies = [
+    "fastapi",
+    "httpx2",
+    "orjson",
+    "pydantic",
+    "pydantic-settings",
+    "uvicorn"
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,51 @@
+line-length = 120
+target-version = "py315"
+
+[lint]
+dummy-variable-rgx = "^_$"
+future-annotations = true
+preview = true
+select = ["ALL"]
+ignore = [ # https://docs.astral.sh/ruff/rules/
+  "commented-out-code", # ERA
+  "missing-trailing-comma", # COM
+  "CPY",
+  "FIX",
+  "TD",
+  "undocumented-public-method",
+  "undocumented-public-function",
+  "undocumented-public-module",
+  "undocumented-public-package",
+  "incorrect-blank-line-before-class",
+  "multi-line-summary-second-line", # D
+  "too-many-arguments",
+  "magic-value-comparison", # PLR
+  "TC",
+  "too-many-nested-blocks" # PLR
+]
+unfixable = [
+  "T20", # flake8-print
+  "unused-variable" # F
+]
+
+[lint.per-file-ignores]
+"tests/**" = [
+  "assert", # S: pytest needs it
+  "call-datetime-without-tzinfo", # DTZ: test data needs no time zone
+  "float-equality-comparison", # RUF: exact arithmetic with a known result
+  "any-type", # ANN: Any on test stubs
+  "no-self-use", # PLR: test stub methods
+  "unused-function-argument", # ARG: stub and fixture parameters
+  "missing-trailing-period",
+  "missing-terminal-punctuation",
+  "docstring-missing-returns" # test docstrings need no punctuation or return section
+]
+
+[lint.isort]
+split-on-trailing-comma = false
+
+[format]
+line-ending = "lf"
+preview = true
+quote-style = "preserve"
+skip-magic-trailing-comma = true
