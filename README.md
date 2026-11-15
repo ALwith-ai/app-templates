@@ -5,10 +5,9 @@ Starting points for the parts of an application. Each directory is a complete pr
 | Template | What it is | Stack |
 | --- | --- | --- |
 | [`react`](react) | Web front end | React, TypeScript, Vite, Tailwind, shadcn, Vitest, Storybook |
-| [`hono`](hono) | HTTP service | Bun, TypeScript, Hono, PostgreSQL, node-pg-migrate, Vitest |
 | [`genos`](genos) | iOS and Android app | Genos (SwiftUI, Jetpack Compose) |
 
-Templates are named after their framework. A FastAPI or Spring template would sit beside `hono`.
+Templates are named after their framework.
 
 ## Use
 
