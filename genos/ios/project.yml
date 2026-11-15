@@ -1,0 +1,47 @@
+name: App
+options:
+  developmentLanguage: en
+  deploymentTarget:
+    iOS: "26.0"
+packages:
+  Genos:
+    url: https://github.com/nyssance/GenosSwift
+    exactVersion: "3.0.0-alpha03"
+targets:
+  App:
+    type: application
+    platform: iOS
+    sources: [Sources]
+    dependencies:
+      - package: Genos
+        product: Genos
+    info:
+      path: Info.plist
+      properties:
+        UILaunchScreen: {}
+        CFBundleDisplayName: App
+        CFBundleShortVersionString: "1.0.0"
+        CFBundleVersion: "1"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: __ALWITH_APPLICATION_ID__
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+  AppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [Tests]
+    dependencies:
+      - target: App
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  App:
+    build:
+      targets:
+        App: all
+        AppTests: [test]
+    test:
+      targets:
+        - AppTests

@@ -1,0 +1,4 @@
+{
+  "extends": "@nyssance/tsconfig/bun.json",
+  "include": ["src/**/*.ts", "build.ts", "vitest.config.ts"]
+}

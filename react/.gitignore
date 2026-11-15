@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+storybook-static
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ALwith evidence (canvas, job ledger, checkpoints) never belongs in the application repository
+.alwith/
+
+# QA run output. E2E runs in the separate test repository, so none of this normally appears here.
+# A delivery commits the whole working tree, so run output a tool drops here must stay out of it.
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+qa-results/

@@ -1,0 +1,12 @@
+.alwith/
+.DS_Store
+ios/*.xcodeproj/
+ios/Info.plist
+ios/build/
+android/.gradle/
+android/.kotlin/
+android/local.properties
+android/**/build/
+android/keystore.properties
+*.jks
+*.keystore

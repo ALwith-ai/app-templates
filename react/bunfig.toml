@@ -1,0 +1,10 @@
+[lint]
+"typeAware" = false
+"plugins" = ["react", "typescript", "oxc"]
+
+[lint.rules]
+"react/rules-of-hooks" = "error"
+"react/only-export-components" = ["warn", { "allowConstantExport" = true }]
+
+[run]
+bun = true

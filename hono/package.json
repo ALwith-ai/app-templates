@@ -1,0 +1,22 @@
+{
+  "name": "alwith-service",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun check --no-script && bun run build.ts",
+    "test": "vitest run --config vitest.config.ts",
+    "start": "bun dist/server.mjs",
+    "migrate": "bun dist/migrate.mjs"
+  },
+  "dependencies": {
+    "hono": "^4.13.18",
+    "node-pg-migrate": "^9.0.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "@nyssance/tsconfig": "^0.1.0",
+    "@types/bun": "^1.4.4",
+    "@types/pg": "^8.23.1",
+    "vitest": "^5.1.0"
+  }
+}

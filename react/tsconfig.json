@@ -1,0 +1,12 @@
+{
+  "extends": "@nyssance/tsconfig",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "specs", "*.config.ts"],
+  "exclude": []
+}
