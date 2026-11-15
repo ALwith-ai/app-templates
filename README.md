@@ -29,7 +29,7 @@ Nothing else in a template refers to the tool that copied it. A template builds 
 
 ## Versions
 
-The repository is versioned as a whole by semantic version tags (`v1.2.3`). A major version changes what a generator can rely on: file names, markers, commands and the events a service writes. Fetch a tag, copy one directory, and record the tag in the project it created.
+The repository is versioned as a whole by semantic version tags (`v0.1.0`). An incompatible version (a minor version while below 1.0, a major version after) changes what a generator can rely on: file names, markers, commands and the events a service writes. Fetch a tag, copy one directory, and record the tag in the project it created.
 
 ## License
 
