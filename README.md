@@ -5,7 +5,7 @@ Starting points for the parts of an application. Each directory is a complete pr
 | Template | What it is | Stack |
 | --- | --- | --- |
 | [`react`](react) | Web front end | React, TypeScript, Vite, Tailwind, shadcn, Vitest, Storybook |
-| [`fastapi`](fastapi) | HTTP service | Python 3.15, uv, FastAPI, Pydantic, pytest, Ruff |
+| [`fastapi`](fastapi) | HTTP service | Python 3.15, uv, FastAPI, Pydantic, PostgreSQL, Alembic, pytest, Ruff |
 | [`genos`](genos) | iOS and Android app | Genos (SwiftUI, Jetpack Compose) |
 
 Templates are named after their framework.
@@ -23,13 +23,13 @@ bun run build
 A tool that lays out a project from these templates, such as ALwith, can depend on two markers. They are part of the templates' contract, not incidental comments.
 
 - `alwith-skeleton-placeholder` marks a placeholder file (`react/index.html`, `react/src/main.tsx`, `react/src/App.tsx`). A generator replaces or removes these files when it writes the first real page.
-- `待填写` is the text of a slot that has not been filled in (`react/src/App.tsx`, `fastapi/main.py`).
+- `待填写` is the text of a slot that has not been filled in (`react/src/App.tsx`, `fastapi/main.py`, `fastapi/openapi.json`).
 
 Nothing else in a template refers to the tool that copied it. A template builds and runs on its own.
 
 ## Versions
 
-The repository is versioned as a whole by Git tags. Fetch a tag, copy one directory, and record the tag in the project it created.
+The repository is versioned as a whole by semantic version tags (`v1.2.3`). A major version changes what a generator can rely on: file names, markers, commands and the events a service writes. Fetch a tag, copy one directory, and record the tag in the project it created.
 
 ## License
 

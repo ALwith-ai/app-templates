@@ -29,6 +29,11 @@ unfixable = [
 ]
 
 [lint.per-file-ignores]
+"build.py" = [
+  "suspicious-subprocess-import",
+  "subprocess-without-shell-equals-true" # S: the build runs fixed tools with fixed arguments
+]
+"migrations/**" = ["implicit-namespace-package"] # INP: Alembic loads these files by path
 "tests/**" = [
   "assert", # S: pytest needs it
   "call-datetime-without-tzinfo", # DTZ: test data needs no time zone

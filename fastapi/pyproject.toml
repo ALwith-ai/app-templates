@@ -3,17 +3,20 @@ name = "service"
 version = "0.1.0"
 requires-python = ">=3.15"
 dependencies = [
+    "alembic",
     "fastapi",
-    "httpx2",
-    "orjson",
+    "psycopg[binary]",
+    "psycopg-pool",
     "pydantic",
     "pydantic-settings",
+    "sqlalchemy",
     "uvicorn"
 ]
 
 [dependency-groups]
-dev = ["pytest"]
+dev = ["pytest", "ruff", "ty"]
 
-[tool.pytest.ini_options]
+[tool.pytest]
+addopts = ["--import-mode=importlib"]
 pythonpath = ["."]
 testpaths = ["tests"]
