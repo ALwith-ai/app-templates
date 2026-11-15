@@ -29,4 +29,8 @@ Nothing else in a template refers to the tool that copied it. A template builds 
 
 ## Versions
 
-The repository is versioned as a whole. A project should record the version of the template it was created from.
+The repository is versioned as a whole by Git tags. Fetch a tag, copy one directory, and record the tag in the project it created.
+
+## License
+
+[MIT](LICENSE)
