@@ -26,5 +26,5 @@ android {
 }
 
 dependencies {
-    implementation("io.github.nyssance:genos:3.0.0-alpha06")
+    implementation("io.github.nyssance:genos:3.0.0-alpha08")
 }
