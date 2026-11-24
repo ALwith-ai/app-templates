@@ -1,7 +1,7 @@
 // A standard Storybook configuration from the template. The project may change it.
-import type { Preview } from "@storybook/react-vite"
 import "../src/index.css"
 
-const preview: Preview = { parameters: {} }
+import addonDocs from "@storybook/addon-docs"
+import { definePreview } from "@storybook/react-vite"
 
-export default preview
+export default definePreview({ addons: [addonDocs()] })

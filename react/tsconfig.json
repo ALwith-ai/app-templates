@@ -7,6 +7,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "specs", "*.config.ts"],
+  "include": ["src", "specs", "*.config.ts", ".storybook/*.ts"],
   "exclude": []
 }
